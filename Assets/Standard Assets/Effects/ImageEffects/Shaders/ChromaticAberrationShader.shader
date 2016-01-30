@@ -8,7 +8,7 @@ Shader "Hidden/ChromaticAberration" {
 	#include "UnityCG.cginc"
 	
 	struct v2f {
-		float4 pos : SV_POSITION;
+		float4 pos : POSITION;
 		float2 uv : TEXCOORD0;
 	};
 	
@@ -29,7 +29,7 @@ Shader "Hidden/ChromaticAberration" {
 		return o;
 	} 
 	
-	half4 fragDs(v2f i) : SV_Target 
+	half4 fragDs(v2f i) : COLOR 
 	{
 		half4 c = tex2D (_MainTex, i.uv.xy + _MainTex_TexelSize.xy * 0.5);
 		c += tex2D (_MainTex, i.uv.xy - _MainTex_TexelSize.xy * 0.5);
@@ -38,7 +38,7 @@ Shader "Hidden/ChromaticAberration" {
 		return c/4.0;
 	}
 
-	half4 frag(v2f i) : SV_Target 
+	half4 frag(v2f i) : COLOR 
 	{
 		half2 coords = i.uv;
 		half2 uv = i.uv;
@@ -73,7 +73,7 @@ Shader "Hidden/ChromaticAberration" {
 		half2(-0.32194,-0.932615),
 	};
 
-	half4 fragComplex(v2f i) : SV_Target 
+	half4 fragComplex(v2f i) : COLOR 
 	{
 		half2 coords = i.uv;
 		half2 uv = i.uv;
@@ -122,6 +122,7 @@ Subshader {
  // 0: box downsample
  Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }      
 
       CGPROGRAM
       
@@ -133,6 +134,7 @@ Subshader {
 // 1: simple chrom aberration
 Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }      
 
       CGPROGRAM
       
@@ -144,9 +146,11 @@ Pass {
 // 2: simulates more chromatic aberration effects
 Pass {
 	  ZTest Always Cull Off ZWrite Off
+	  Fog { Mode off }
 
       CGPROGRAM
       
+      #pragma exclude_renderers flash
       #pragma vertex vert
       #pragma fragment fragComplex
       

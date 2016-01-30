@@ -1,0 +1,17 @@
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/UnityEngine.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/UnityEditor.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Assembly-UnityScript-firstpass.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Mono.Cecil.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Unity.DataContract.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/oozgur/Desktop/Unity/Railcart/Temp/bin/Debug/Mono.Cecil.Mdb.dll
