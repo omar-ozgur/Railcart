@@ -9,14 +9,18 @@ public class MonsterMove : MonoBehaviour {
 
 	private Transform player;
 	Quaternion lookRotation;
+	Animator anim;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update () {
 		if (Vector3.Distance (this.transform.position, player.position) > stopDistance) {
-			this.transform.position = Vector3.Lerp(this.transform.position, player.position, speed * Time.deltaTime);
+			this.transform.position = Vector3.Lerp (this.transform.position, player.position, speed * Time.deltaTime);
+		} else {
+			anim.SetBool("inRange", true);
 		}
 		lookRotation = Quaternion.LookRotation (new Vector3 (this.transform.position.x, 0, this.transform.position.z) - new Vector3 (player.position.x, 0, player.position.z));
 		this.transform.rotation = Quaternion.Lerp(this.transform.rotation, lookRotation, rotationSpeed);
